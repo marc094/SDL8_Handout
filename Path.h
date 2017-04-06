@@ -31,7 +31,7 @@ public:
 		steps[last_step++].speed = speed;
 	}
 
-	iPoint GetCurrentPosition(Animation** current_animation = nullptr)
+	iPoint GetCurrentSpeed(Animation** current_animation = nullptr)
 	{
 		current_frame += 1;
 

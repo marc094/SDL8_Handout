@@ -41,7 +41,18 @@ bool ModuleSceneSpace::Start()
 	App->enemies->AddEnemy(ENEMY_TYPES::REDBIRD, 665, 80);
 	
 	// TODO 1: Add a new wave of red birds
-	
+	int delta_x = 200;
+	int delta_y = 50;
+	App->enemies->AddEnemy(ENEMY_TYPES::REDBIRD, 600 + delta_x, 80 + delta_y);
+	App->enemies->AddEnemy(ENEMY_TYPES::REDBIRD, 625 + delta_x, 80 + delta_y);
+	App->enemies->AddEnemy(ENEMY_TYPES::REDBIRD, 640 + delta_x, 80 + delta_y);
+	App->enemies->AddEnemy(ENEMY_TYPES::REDBIRD, 665 + delta_x, 80 + delta_y);
+
+	App->enemies->AddEnemy(ENEMY_TYPES::BROWNCOOKIE, 350, 60);
+	App->enemies->AddEnemy(ENEMY_TYPES::BROWNCOOKIE, 375, 60);
+	App->enemies->AddEnemy(ENEMY_TYPES::BROWNCOOKIE, 400, 60);
+	App->enemies->AddEnemy(ENEMY_TYPES::BROWNCOOKIE, 425, 60);
+
 	return true;
 }
 

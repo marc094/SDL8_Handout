@@ -6,6 +6,8 @@
 #include "ModuleTextures.h"
 #include "Enemy.h"
 #include "Enemy_RedBird.h"
+#include "Enemy_BrownCookie.h"
+#include <random>
 
 #define SPAWN_MARGIN 50
 
@@ -128,6 +130,10 @@ void ModuleEnemies::SpawnEnemy(const EnemyInfo& info)
 		{
 			case ENEMY_TYPES::REDBIRD:
 			enemies[i] = new Enemy_RedBird(info.x,info.y);
+			break;
+			case ENEMY_TYPES::BROWNCOOKIE:
+			int delay = rand() % 20 - 10;
+			enemies[i] = new Enemy_BrownCookie(info.x, info.y, delay);
 			break;
 		}
 	}
